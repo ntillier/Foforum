@@ -1,0 +1,14 @@
+.tag {
+    font-size: 14px;
+    background: var(--primary-transparent);
+    color: var(--color-stronger);
+    width: fit-content;
+    border-radius: 4px;
+    padding: 4px 8px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+.tag:hover {
+    background: var(--primary-dimmest);
+}

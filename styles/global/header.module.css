@@ -1,0 +1,129 @@
+.header {
+    background: var(--background-higher);
+    padding: 12px 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: auto;
+    width: 100vw;
+    user-select: none;
+}
+.logo {
+    position: relative;
+    height: 18px;
+    width: auto !important;
+    flex: 1 1 0%;
+    cursor: pointer;
+}
+.menu {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 4px;
+    margin: 0 12px 0 0;
+    padding: 8px;
+    transition: 175ms;
+}
+.menu:hover {
+    background: var(--background-root);
+}
+.leftPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.rightPart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.input {
+    background: var(--background-root);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 18px;
+}
+.input input {
+    outline: none;
+    border: solid 0px transparent;
+    background: transparent;
+    font-weight: 600;
+    height: 48px;
+    padding: 0 4px;
+    margin: 0 0 0 4px;
+    width: 200px;
+    transition: 175ms;
+    color: var(--color-dimmer);
+}
+.input input:focus {
+    width: 400px;
+}
+.notifications {
+    padding: 12px;
+    margin: 0 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 175ms;
+}
+.notifications:hover {
+    background: var(--background-root);
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    background: transparent;
+    transition: 175ms;
+    padding: 8px 12px;
+}
+.profile:hover {
+    background: var(--background-root);
+}
+.profile img {
+    height: 32px;
+    width: 32px;
+    margin: 0 12px 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        padding: 12px;
+    }
+    .menu {
+        display: block;
+    }
+    .input input:focus {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .input {
+        padding: 10px;
+        background: transparent;
+        cursor: pointer;
+        transition: 175ms;
+    }
+    .input:hover {
+        background: var(--background-root);
+    }
+    .input input {
+        display: none;
+    }
+    .input > svg > path {
+        fill: var(--color-strongest) !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .notifications {
+        display: none;
+    }
+}

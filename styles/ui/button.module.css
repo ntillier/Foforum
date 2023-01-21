@@ -1,0 +1,19 @@
+.button {
+    border-radius: 4px;
+    border-width: 0px;
+    padding: 12px 18px;
+    margin: 8px 4px;
+    display: block;
+    cursor: pointer;
+    background: var(--primary-default);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 2px var(--grey-dimmest);
+    transition: 175ms;
+}
+/*.button:hover {
+    background: var(--primary-default);
+}
+.button:focus {
+    box-shadow: 0 0 0 4px var(--primary-dimmer);
+}*/

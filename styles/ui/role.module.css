@@ -1,0 +1,9 @@
+.role {
+    display: block;
+    width: max-content;
+    color: var(--color-strongest);
+    text-decoration: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-radius: 100px;
+}

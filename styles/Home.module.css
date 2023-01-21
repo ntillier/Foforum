@@ -1,0 +1,27 @@
+.html {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.body {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    width: 100vw;
+    height: 0;
+    flex: 1 1 0%;
+    overflow: hidden;
+    background: var(--background-root);
+}
+.app {
+    background: var(--background-higher);
+    border-radius: 4px;
+    padding: 12px;
+    width: 0px;
+    flex: 1 1 0%;
+}

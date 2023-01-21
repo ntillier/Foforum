@@ -1,0 +1,97 @@
+type Query {
+    userByUsername(username: String!): User
+    userById(id: String!): User
+
+    categoryById(id: String!): Category
+    getCategories: [Category!]!
+
+    getTags: [Tag!]!
+    getPreferences: Preferences
+
+    topicsInCategory(category: String!, tag: String, cursor: String): Thread!
+    topicsWithTag(tag: String!, cursor: String): Thread!
+    trendingTopics(cursor: String): Thread!
+    topicByLink(link: String!): Topic
+
+    getReplies(of: String!, cursor: String): Thread!
+}
+
+type Preferences {
+    categories: [Category!]!
+    tags: [Tag!]!
+    sidebar: Sidebar!
+}
+
+type Sidebar {
+    categories: [Category!]!
+    tags: [Tag!]!
+}
+
+type User {
+    id: String!
+    image: String!
+    username: String!
+    name: String
+    bio: String
+    website: String
+    location: String
+    level: Level
+    followers: [User!]!
+    roles: [Role!]!
+}
+type Topic {
+    title: String!
+    content: String!
+    link: String!
+    date: String!
+    repliesCount: Int!
+    likesCount: Int!
+    likedByUser: Boolean!
+    author: User
+    answer: Reply
+    latest: [User!]!
+    category: Category
+    tags: [Tag!]!
+    replies: Thread!
+}
+type Thread {
+    items: [Pageable!]!
+    pageInfo: PageInfo!
+}
+type Level {
+    label: String!
+    id: String!
+}
+type Reply {
+    id: String!
+    content: String!
+    date: String!
+    repliesCount: Int!
+    author: User
+    isReply: Boolean
+    replies: [Reply!]
+    reactions: [Reaction!]!
+}
+type Reaction {
+    id: String!
+}
+type Tag {
+    id: String!
+    label: String!
+}
+type Category {
+    id: String!
+    label: String!
+    color: String!
+    canSend: [String!]!
+}
+type Role {
+    label: String!
+    id: String!
+}
+type PageInfo {
+    hasNextPage: Boolean!
+    nextCursor: String
+}
+
+union Pageable = Reply | Topic

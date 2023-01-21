@@ -1,0 +1,101 @@
+.list {
+    border-collapse: separate !important;
+    border: solid 0px transparent;
+    width: 100%;
+    border-spacing: 0px 4px;
+    overflow: hidden;
+    height: auto;
+}
+.header {
+    margin: 4px 0;
+    background: var(--background-root);
+    user-select: none;
+}
+.header th {
+    width: 0;
+    flex: 0 0 auto;
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-dimmer);
+}
+.header th:first-child {
+    text-align: left;
+    padding: 12px 32px;
+    color: var(--color-stronger);
+    width: 0;
+    flex: 1 1 0%;;
+}
+.header th:first-child, .row td:first-child {
+    border-radius: 4px 0 0 4px;
+}
+.header th:last-child, .row td:last-child {
+    border-radius: 0 4px 4px 0;
+}
+.row {
+    cursor: pointer;
+    transition: 100ms;
+}
+.row:hover {
+    background: var(--background-root);
+}
+.row.resolved {
+    background: var(--background-resolved) !important;
+}
+.row td {
+    padding: 20px 0;
+}
+.row td:last-child {
+    text-align: center;
+}
+.row td:last-child > * {
+    vertical-align: middle;
+    margin-right: -24px;
+    position: relative;
+    left: -12px;
+}
+.row td:last-child img {
+    width: 48px;
+    height: 48px;
+    padding: 4px;
+    border-radius: 100px;
+    background: var(--background-root);
+    border: solid 4px var(--background-higher);
+    user-select: none;
+}
+.row td:nth-child(2), .row td:nth-child(3) {
+    color: var(--color-dimmer);
+    text-align: center;
+    font-size: 18px;
+    user-select: none;
+}
+.row td:first-child {
+    padding: 12px 32px;
+}
+.title {
+    color: var(--color-stronger);
+    font-weight: 600;
+    font-size: 20px;
+    word-break: break-word;
+    width: 100%;
+}
+.tags {
+    top: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+@media screen and (max-width: 1200px) and (min-width: 100px) {
+    .header th:last-child, .row td:last-child {
+        display: none;
+    }
+    .header th {
+        padding: 8px 0px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .header th:nth-child(3), .row td:nth-child(3) {
+        display: none;
+    }
+}

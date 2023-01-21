@@ -1,0 +1,125 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@supports (font: -apple-system-body) and (-webkit-appearance: none) { img[loading="lazy"] { clip-path: inset(0.6px) } }
+
+:root {
+  --red: #FF0000;
+  --blue: #0080FF;
+  --green: #80d475;
+  --yellow: #e9d57c;
+  --brown: #884b0e;
+  --purple: #836edd;
+
+  --primary-stronger: #4173D9;
+  --primary-default: #5D8AE8;
+  --primary-dimmer: #D8E4Fc;
+  --primary-dimmest: #E9EFFA;
+  --primary-transparent: #f1f5fc;
+
+  --secondary-one: #BBFDF3;
+  --secondary-two: #21E6C1;
+  --secondary-three: #FA0559;
+
+  --grey-strongest: #434B4B;
+  --grey-stronger: #494D4D;
+  --grey-default: #737979;
+  --grey-dimmer: #9DA7A7;
+  --grey-dimmest: #C4CBCB;
+  
+  --background-root: #f9fafc;
+  --background-higher: #FFFFFF;
+  --background-resolved: #eefffc;
+
+  --color-strongest: #222222;
+  --color-dimmer: #9da9b6;
+
+  /*--dark-red: #b30000;
+  --dark-blue: #0066cc;
+  --dark-green: #45ae37;
+  --dark-yellow: #dab925;
+  --dark-brown: #5c330a;
+  --dark-purple: #3e27a5;*/
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-transparent);
+  border-radius: 4px;
+}
+
+body {
+  margin: 0px;
+  background: var(--background-root);
+}
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+* {
+  box-sizing: border-box;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; */
+  font-family: 'Inter', sans-serif;
+}
+.paragraph {
+  margin: 8px 0;
+  white-space: pre-wrap;
+}
+code {
+  background: var(--primary-transparent);
+  color: var(--color-strongest);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.hljs {
+  background: #2a2c2d !important;
+  max-height: 500px;
+}
+pre {
+  margin: 8px 0px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  
+}
+
+@media (prefers-reduced-motion) {
+  /*.thirteen::before {
+    animation: none;
+  }
+
+  .card:hover span {
+    transform: none;
+  }*/
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  
+}

@@ -1,0 +1,119 @@
+.sidebar {
+    position: relative;
+    width: 320px;
+    height: 100%;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 0 8px 0 0;
+    background: var(--background-higher);
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    overflow-x: hidden;
+    overflow-y: auto;
+    user-select: none;
+    z-index: 40;
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+}
+.general > a {
+    border-radius: 4px;
+    color: var(--color-strongest);
+    font-size: 16px;
+    text-decoration: none;
+    width: 100%;
+    padding: 12px 18px;
+    margin: 4px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.general > a:hover {
+    background: var(--background-root);
+}
+
+.general > a[data-selected=true] {
+    color: var(--primary-stronger);
+    background: var(--primary-transparent) !important;
+}
+
+.part {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+}
+.label {
+    color: var(--color-dimmer);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 18px;
+}
+.circle {
+    position: relative;
+    border-radius: 100px;
+    height: 16px !important;
+    width: 16px !important;
+    background: transparent;
+    border: solid 3px var(--grey-default);
+    transition: 200ms;
+}
+.circle, .part svg {
+    flex: 0 0 auto;
+    margin: 0 8px 0 0;
+}
+.part > a {
+    color: var(--color-strongest);
+    border-radius: 4px;
+    color: var(--color-strongest);
+    text-decoration: none;
+    width: 100%;
+    padding: 10px 18px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.part > a:hover {
+    background: var(--background-root);
+}
+.part > a[data-selected=true] {
+    background: var(--primary-transparent) !important;
+}
+.part > a span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width: 1000px) {
+    .background {
+        pointer-events: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--grey-dimmest);
+        z-index: 30;
+        transition: 175ms;
+        opacity: 0;
+    }
+    .sidebar {
+        position: absolute;
+        top: 0;
+        left: -320px;
+        height: 100vh;
+        border-radius: 0 4px 4px 0;
+        transition: left 175ms;
+        box-shadow: 2px 0 8px var(--grey-dimmest);
+    }
+    .sidebar.show {
+        left: 0;
+    }
+    .sidebar.show + .background {
+        pointer-events: all;
+        opacity: 0.5;
+    }
+}

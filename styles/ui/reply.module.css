@@ -1,0 +1,149 @@
+.reply {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+}
+.reply:not(.notreply) {
+    padding: 8px;
+}
+.notreply::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: calc(100% - 24px);
+    border: none;
+    height: 1px;
+    background: var(--primary-transparent);
+}
+.content {
+    padding: 0 0 0 68px;
+    font-size: 16px;
+    white-space: pre-wrap;
+    color: var(--color-highest);
+    line-height: 1.2rem;
+}
+.content img {
+    max-width: 90%;
+    max-height: 150px;
+    margin: 12px 0;
+}
+.best {
+    background: var(--background-resolved);
+    color: var(--secondary-two);
+    border-radius: 100px;
+    padding: 4px 8px;
+    font-weight: 600;
+    font-size: 12px;
+    height: fit-content;
+    cursor: default;
+}
+.bar {
+    margin: 4px 0 0 0;
+    padding: 4px 12px 4px 68px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.bar hr {
+    margin: 8px 0px;
+    padding: 0px;
+    border: solid 1px var(--primary-transparent);
+    border-width: 0 1px 0 0;
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: solid 0px transparent;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-dimmer);
+    transition: 175ms;
+}
+.button:hover {
+    color: var(--color-highest);
+}
+.react {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.reactions {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    padding: 0 4px;
+}
+.reaction {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--background-root);
+    border: solid 1px var(--background-root);
+    color: var(--color-highest);
+    cursor: pointer;
+    transition: 175ms;
+}
+.reaction:hover {
+    border-color: var(--primary-dimmest);
+}
+.choose {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    gap: 8px;
+    position: absolute;
+    background: var(--background-higher);
+    box-shadow: 0 0 4px var(--primary-dimmer);
+    border-radius: 4px;
+    z-index: 10;
+    transform: translateY(-80%);
+    opacity: 0;
+    pointer-events: none;
+    transition: 175ms;
+}
+.react > button:focus-within + .choose {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(-100%);
+}
+.choose img {
+    cursor: pointer;
+    background: transparent;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    transform: scale(1);
+    transition: 175ms;
+}
+.choose img:hover {
+    transform: scale(1.2);
+}
+.replies {
+    margin: 8px 0 0 68px;
+    border-radius: 4px;
+    /* border: solid 1px var(--primary-dimmer); */
+    background: var(--background-root);
+}
+.fetch {
+    display: flex;
+    margin: 12px auto;
+    border-radius: 4px;
+    outline: none;
+    border: solid 1px var(--color-highest);
+    color: var(--color-highest);
+    cursor: pointer;
+    background: var(--primary-transparent);
+    padding: 12px 18px;
+}
