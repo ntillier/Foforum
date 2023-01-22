@@ -6,7 +6,8 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import styles from 'styles/Home.module.css';
-import '../styles/globals.css'
+import '../styles/globals.css';
+import "@fontsource/inter/300.css";
 
 export default function App({ Component, pageProps }) {
   
